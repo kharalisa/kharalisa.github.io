@@ -17,12 +17,13 @@ p { margin: 0 0 16px; }
 a { color: #B36D86; } a:hover { color: #805464; }
 ul,ol { padding-left: 27px; } li { margin: 7px 0; } li::marker { color:#C98BA0; }
 img { display: block; max-width: 100%; border-radius: 12px; }
-.image-left,.image-right { width: 200px; height: 300px; object-fit: cover; object-position: center; }
+.image-left,.image-right { width: 220px; height: auto; max-height: 340px; object-fit: contain; }
+.image-right.landscape-photo { width: 290px; max-height: none; }
 .image-left { float: left; margin: 0 25px 15px 0; }
 .image-right { float: right; margin: 0 0 15px 25px; }
-.wide-photo { width: 100%; max-height: 360px; object-fit: cover; object-position: center; margin-bottom: 18px; }
+.wide-photo { width: auto; max-width: 100%; height: auto; max-height: 480px; object-fit: contain; margin: 0 auto 18px; }
 .photo-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:18px; }
-figure { margin: 0; } figure img { width:100%; height: 290px; object-fit:cover; } figcaption { font-size: 14px; color: #896773; padding: 9px 0; }
+figure { margin: 0; } figure img { width:100%; height: 320px; object-fit: contain; background: #FAF3ED; padding: 8px; } figcaption { font-size: 14px; color: #896773; padding: 9px 0; }
 table { width:100%; border-collapse:collapse; margin:20px 0; } th,td { border:1px solid #E8C9D2; padding:12px; text-align:left; } th {background:#F5DCE3;} tr:nth-child(even) {background:#FFF3F6;}
 .rating { color: #A5697D; font-weight: bold; }
 .button-row { display:flex; flex-wrap:wrap; gap:10px; }
@@ -30,4 +31,9 @@ button { background:#D9A5B5; color:#553C45; border:0; border-radius:25px; paddin
 button:hover { background:#C98BA0; }
 footer { background:#F1D5DD; text-align:center; padding:25px 15px; color:#805464; }
 footer a { color:#805464; }
-@media(max-width:600px){section {padding:25px 20px;} nav a{margin:4px 7px;} .image-left,.image-right {float:none; width:100%; max-width:300px; height: auto; max-height: 420px; margin: 0 auto 20px;} .photo-grid{grid-template-columns:1fr 1fr;} figure img{height:210px;} th,td{padding:8px; font-size:14px;} }
+@media(max-width:600px){section {padding:25px 20px;} nav a{margin:4px 7px;} .image-left,.image-right {float:none; width:100%; max-width:300px; height: auto; max-height: 420px; margin: 0 auto 20px;} .photo-grid{grid-template-columns:1fr 1fr;} figure img{height:240px;} th,td{padding:8px; font-size:14px;} }
+
+/* Развёрнутые отзывы */
+.review-photo { float: left; width: 185px; max-width: 45%; height: auto; max-height: 320px; object-fit: contain; margin: 0 26px 16px 0; background: #FAF3ED; }
+.review-note { padding: 12px 16px; border-left: 3px solid #D9A5B5; background: #FFF5F7; font-style: italic; }
+@media(max-width:600px){ .image-right.landscape-photo { width: 100%; max-width: 360px; } .review-photo { float: none; max-width: 100%; width: auto; max-height: 340px; margin: 0 auto 18px; } }
