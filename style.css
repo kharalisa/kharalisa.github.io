@@ -117,9 +117,11 @@ img {
 
 .image-left {
     float: left;
-    width: 220px;
-    height: auto;
-    margin: 0 25px 15px 0;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 25px 20px 0;
     border-radius: 12px;
 }
 
