@@ -127,8 +127,12 @@ img {
 
 .image-right {
     float: right;
-    width: 220px;
-    margin: 0 0 15px 25px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 0 20px 25px;
+    border-radius: 12px;
 }
 
 /* Таблицы */
