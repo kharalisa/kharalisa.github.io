@@ -201,3 +201,10 @@ footer a {
         margin: 15px auto;
     }
 }
+
+/* Корректное обтекание изображений */
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
