@@ -118,9 +118,7 @@ img {
 .image-left {
     float: left;
     width: 220px;
-    max-height: 320px;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     margin: 0 25px 15px 0;
     border-radius: 12px;
 }
@@ -207,9 +205,3 @@ footer a {
     }
 }
 
-/* Корректное обтекание изображений */
-section::after {
-    content: "";
-    display: block;
-    clear: both;
-}
